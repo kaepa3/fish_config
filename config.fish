@@ -7,5 +7,8 @@ eval (pyenv virtualenv-init - | source)
 # node
 set PATH $PATH:$HOME/.nodebrew/current/bin
 
+set -x GOPATH (go env GOPATH) 
+set -x PATH $PATH:$GOPATH/bin
+
 alias vi='nvim'
 alias vim='nvim'
