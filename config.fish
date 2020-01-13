@@ -1,14 +1,15 @@
 # pyenv
-set PATH $HOME/.pyenv/shims $PATH
+set -U fish_user_paths $HOME/.pyenv/shims $fish_user_paths   
+set -x PATH  $PATH
 set -x PYENV_ROOT $HOME/.pyenv
-set -x PATH $PYENV_ROOT/bin:$PATH
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths   
 eval (pyenv init - | source)
 eval (pyenv virtualenv-init - | source)
 # node
-set PATH $PATH:$HOME/.nodebrew/current/bin
+set -U fish_user_paths $HOME/.nodebrew/current/bin $fish_user_paths   
 
 set -x GOPATH (go env GOPATH) 
-set -x PATH $PATH:$GOPATH/bin
+set -U fish_user_paths $GOPATH/bin $fish_user_paths   
 
 alias vi='nvim'
 alias vim='nvim'
