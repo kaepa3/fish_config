@@ -14,5 +14,7 @@ set -U fish_user_paths $GOPATH/bin $fish_user_paths
 
 set PATH ~/.flutterbin/bin $PATH
 
+set -g theme_display_git_master_branch yes
+
 alias vi='nvim'
 alias vim='nvim'
